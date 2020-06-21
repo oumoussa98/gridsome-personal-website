@@ -47,9 +47,6 @@ export default {
   margin-top: 80px;
   height: 1200px;
 }
-.active--exact {
-  border-bottom: 4px solid rgb(6, 184, 80);
-  cursor: text;
-}
+
 
 </style>
