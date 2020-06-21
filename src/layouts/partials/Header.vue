@@ -2,15 +2,14 @@
   <div >
       <!--              computer vesion                 -->
       <div class="header" v-if="!mobileView">
-              <!------------ brand area -------------------->
+              <!------- brand area ------>
               <div class="brand">
                   <a class="brand-g-link" :href="brand.to">                  
                       <g-image class="brand-img" src="~/assets/images/logo.svg" alt="logo" width="60" />
                       <span class="brand-link">{{ brand.name }}</span>
                   </a>
               </div>
-              <!--------------- Links area --------------->
-              <!-- for computers -->
+              <!-------- Links area ------>
               <div class="links">
                  <ul>
                      <li v-for="(link, i) in links" :key="i">
@@ -18,9 +17,12 @@
                      </li>
                  </ul>
               </div>
-              <!-------------- other things area ------------>
-              <div class="other" v-if="!mobileView">
-                 <ul>
+              <!------- other things area ------>
+              <div class="other" v-if="!mobileView">                  
+                 <ul>  
+                     <li>              
+                        <button v-on:click="modeToggler"><i :class="fa"></i></button>
+                     </li> 
                      <li v-for="(other, i) in others" :key="i">
                          <g-link class="g-link" :to="other.to">{{other.name}}</g-link>
                      </li>
@@ -29,15 +31,17 @@
       </div>
 
     <!--              mobile version              -->
+
         <div class="header" v-else>
              <div class="header">
-              <!------------ brand area -------------------->
+              <!-------- brand area ------->
               <div class="brand">
                   <a class="brand-g-link" :href="brand.to">                  
                       <g-image class="brand-img" src="~/assets/images/logo.svg" alt="logo" width="60" />
+                       <span class="brand-link">{{ brand.name }}</span>
                   </a>
               </div>
-              <!--------------- Links area --------------->
+              <!-------- Links area -------->
               <div>
                     <button class="button-drawer" @click="toggle" >
                         <i class="fa fa-bars"></i>
@@ -50,6 +54,9 @@
                         <li v-for="(other, i) in others" :key="i+10">
                           <g-link class="g-link" :to="other.to">{{other.name}}</g-link>
                         </li>
+                        <li>              
+                          <button v-on:click="modeToggler"><i :class="fa"></i></button>
+                        </li> 
                     </div>
                 </div>
               </div>
@@ -65,7 +72,7 @@ export default {
     data: () => ({
     // Brand --------------------
     brand: {
-        name: 'umoussa' ,
+        name: 'Oumoussa' ,
         to: '/' ,
         //
     },
@@ -79,20 +86,46 @@ export default {
 
     //Other ---------------------
     others: [
-        {name:'Blog',to:'/blog'},
         //
     ],
-
+    // for mobile devices
     mobileView: false ,
     drawer: false ,
+
+    // light and dark mode 
+     fa: 'far fa-lightbulb',
 
 
     }),
 // Methods =====================================
-   methods: {
+   methods: { 
+
+       setCssVar(cssVar,newValue)  {
+           window.getComputedStyle(document.documentElement).getPropertyValue(cssVar);
+           document.documentElement.style.setProperty(cssVar, newValue);
+       },
+
        toggle() { 
           this.drawer = !this.drawer ;
          },
+
+       modeToggler() {
+           if( this.fa === 'far fa-lightbulb' )
+            { 
+               this.fa = 'fas fa-lightbulb' ;
+               this.setCssVar('--bg','#444647')
+               this.setCssVar('--color','rgb(189, 184, 184)')
+              
+            }
+           else 
+           {
+              this.fa = 'far fa-lightbulb' ; 
+              this.setCssVar('--bg','white') ;
+              this.setCssVar('--color','#34495e')
+           }
+
+       },
+      
    },
    created() {
       if(window.innerWidth <= 700) this.mobileView = true ;
@@ -126,7 +159,7 @@ export default {
         list-style-type: none;
         text-align: center;
         justify-items: center;
-        padding: 6px;
+        padding: 10px 6px;
     }
     .button-drawer {
         float:right ;
@@ -139,7 +172,7 @@ export default {
     }
    .brand {
         float:left;
-        width: 25%;
+        min-width: 25%;
         margin-left: 10px;
         clear: left;
    }
@@ -159,23 +192,34 @@ export default {
        width: 50%;
    }
    .other {
+       display: inline-block;
        text-align: right;
        width: 25%;
        margin-right: 10px;
    }
-    .links ul > li {
+   .other ul li { 
+       display: inline-block; 
+       margin: 0 10px;
+       padding: 0 5px ;
+   }
+   .other ul li button i {
+       font-size: 25px;
+   }
+
+    .links ul li {
       display: inline-block;
-      list-style-type: none;
-      margin: 0 10px;
+      margin: 0 15px;
+      padding: 0 5px ;
   }
   .g-link {
       text-decoration: none;
       color: var(--color);
       text-transform: uppercase;
+      padding: 0 2px;
   }
   .g-link:hover {
       color: var(--color);
-      border-bottom: 4px solid rgb(6, 184, 80);
+      border-bottom: 4px solid rgb(11, 230, 127);
       transition: all 0.2s;
       
   }
