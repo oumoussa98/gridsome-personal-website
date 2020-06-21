@@ -3,8 +3,22 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/css/bootstrapGrid.min.css'
+import '~/assets/css/sharedCss.css'
 
 export default function (Vue, { router, head, isClient }) {
+
+  head.link.push(
+  
+    {
+      rel: "stylesheet",
+      href: "https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900',
+    },
+
+  );
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 }

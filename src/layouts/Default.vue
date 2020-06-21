@@ -1,16 +1,24 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
+<div class="layout">
+
+  <div class="header">
+    <Header />
+  </div>
+   
+  <div class="content"> 
     <slot/>
   </div>
+
+  <div class="footer">
+    <Footer/>
+  </div>
+
+      
+      <!-- <strong>
+        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
+      </strong> -->
+   
+</div>
 </template>
 
 <static-query>
@@ -21,30 +29,27 @@ query {
 }
 </static-query>
 
+<script>
+import Header from '~/layouts/partials/Header'
+import Footer from '~/layouts/partials/Footer'
+
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
+
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+
+.content {
+  margin-top: 80px;
+  height: 1200px;
+}
+.active--exact {
+  border-bottom: 4px solid rgb(6, 184, 80);
+  cursor: text;
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
 </style>
