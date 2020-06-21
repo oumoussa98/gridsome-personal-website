@@ -9,4 +9,22 @@
 body {
     margin: 0 auto;   
     background-color: var(--bg);
+    font-size: 15px;
+    color: var(--color);
+}
+.display-3 {
+    font-size: 50px;
+    padding: 0;
+}
+.header {
+    z-index: 99;
+}
+.active--exact {
+    border-bottom: 4px solid rgb(11, 230, 127);
+    cursor: text;
+  }
+button {
+    border: none;
+    outline: none;
+    background: none;
 }
