@@ -21,7 +21,7 @@
               <div class="other" v-if="!mobileView">                  
                  <ul>  
                      <li>              
-                        <button v-on:click="modeToggler"><i :class="fa"></i></button>
+                        <button v-on:click="setModeDarkLight"><i :class="fa"></i></button>
                      </li> 
                      <li v-for="(other, i) in others" :key="i">
                          <g-link class="g-link" :to="other.to">{{other.name}}</g-link>
@@ -62,7 +62,6 @@
               </div>
         </div>
 
-
     </div>
 </template>
 
@@ -98,38 +97,82 @@ export default {
 
     }),
 // Methods =====================================
-   methods: { 
+   methods: {
 
-       setCssVar(cssVar,newValue)  {
-           window.getComputedStyle(document.documentElement).getPropertyValue(cssVar);
-           document.documentElement.style.setProperty(cssVar, newValue);
-       },
-
-       toggle() { 
-          this.drawer = !this.drawer ;
-         },
-
-       modeToggler() {
-           if( this.fa === 'far fa-lightbulb' )
+       // access css variables and change their values
+       setCssVar(cssVar,newValue)  
+            {
+                window.getComputedStyle(document.documentElement).getPropertyValue(cssVar);
+                document.documentElement.style.setProperty(cssVar, newValue);
+            },
+       // get cookies by its name
+       getCookie(cname) 
+            {
+                    var name = cname + "=";
+                    var decodedCookie = decodeURIComponent(document.cookie);
+                    var ca = decodedCookie.split(';');
+                    for(var i = 0; i <ca.length; i++) {
+                        var c = ca[i];
+                        while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                        }
+                    }
+                    return "";
+            },
+       // create a new cookie
+       setCookie(cname, cvalue, exdays) 
+            {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            },
+       // toggle links display in mobile devices
+       toggle() 
             { 
-               this.fa = 'fas fa-lightbulb' ;
-               this.setCssVar('--bg','#444647')
-               this.setCssVar('--color','rgb(189, 184, 184)')
-              
-            }
-           else 
-           {
-              this.fa = 'far fa-lightbulb' ; 
-              this.setCssVar('--bg','white') ;
-              this.setCssVar('--color','#34495e')
-           }
+            this.drawer = !this.drawer ;
+            },
+       // toggle between dark and light mode
+       setModeDarkLight() 
+            {
+                    if(this.fa === 'far fa-lightbulb')
+                                    { 
+                                    this.fa = 'fas fa-lightbulb' ;
+                                    this.setCssVar('--bg','#444647') ;
+                                    this.setCssVar('--color','rgb(189, 184, 184)') ; 
+                                    this.setCookie('oumoussaBg','#444647',7)  ;
+                                    this.setCookie('oumoussaColor','rgb(189, 184, 184)',7)  ;                             
 
-       },
+                                    }
+                    else 
+                                    {
+                                        this.fa = 'far fa-lightbulb' ; 
+                                        this.setCssVar('--bg','white') ;
+                                        this.setCssVar('--color','#34495e')
+                                        this.setCookie('oumoussaBg','white',7)  ;
+                                        this.setCookie('oumoussaColor','#34495e',7)  ;
+                                    } 
+            },
       
    },
-   created() {
-      if(window.innerWidth <= 700) this.mobileView = true ;
-   },
+      // vueJs created function
+      created() 
+            {
+                // get user settings of dark and light mode and load it
+                let bg = this.getCookie('oumoussaBg'), color = this.getCookie('oumoussaColor') ;
+                    if(bg && color)    
+                        {
+                            if(bg === '#444647') this.fa = 'fas fa-lightbulb' ;
+                            else this.fa = 'far fa-lightbulb' ;
+                            this.setCssVar('--bg',bg) ;
+                            this.setCssVar('--color',color) ;
+                        }
+                // check the screen size
+                if(window.innerWidth <= 700) this.mobileView = true ;
+            },
   
 
 
