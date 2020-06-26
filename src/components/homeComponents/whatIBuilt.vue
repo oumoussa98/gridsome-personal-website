@@ -1,52 +1,30 @@
 <template>
-  <v-container class="skills" >
-      <div class="display-3 my-10" ><p> What I Built </p></div>
-      <v-row>
-        <span v-for="(project,i) in projects" :key="i"  >
-        <v-col  align="start" col="4">
-         <v-card
-          raised
-          max-width="344"
-          class="mx-auto"
-        >
-    <v-list-item>
-      <v-list-item-content>
-        <v-list-item-title class="headline">{{project.headline}}</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-
-    <v-img
-      :src="project.img"
-      height="194"
-    ></v-img>
-
-    <v-card-text>
-    {{ project.description }}
-    </v-card-text>
-
-    <v-card-actions>
-      <v-btn
-        :href="project.href"
-        text
-        color="deep-purple accent-4"
-        class="blue--text"
-        target="_blanck"
-        
-      >
-        See the project
-      </v-btn>
-      <v-spacer></v-spacer>
-    </v-card-actions>
-  </v-card>
-        </v-col>
-      </span>
-      </v-row>
-  </v-container>   
+  <div class="skills container" >
+      <div class="display-3" ><p> What I Built </p></div>
+      <div class="row">
+        <div v-for="(project,i) in projects" :key="i"  >
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-title">
+                <h3>{{ project.title }}</h3>
+              </div>
+              <div class="card-image">
+                <img alt="Project screenshot" v-bind:src="project.img">
+              </div>
+              <div class="card-footer">
+                <p>
+                   {{ project.description }}
+                </p>
+              </div>
+              <div id="card-links">
+                <a :href="project.href" target="_blanck">See The Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>   
 </template>
-
-<style lang="scss" scoped>
-  
-</style>
 
 <script>
 export default {
@@ -57,31 +35,71 @@ export default {
 
         projects: [
           {
-            headline: 'Ecommerce website',
+            title: 'Tool for management ',
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
-            href: 'https://something.com',
-            img: 'https://sabg.online/wp-content/uploads/2020/04/woocommerce-wholesale-storm-creek-983x553-1.jpg'
+            href: 'https://github.com/oumoussa98/tool-for-management',
+            img: 'https://raw.githubusercontent.com/oumoussa98/tool-for-management/master/screenshots/screenshot1.PNG'
           },
           {
-            headline: 'Bank website',
+            title: 'Blog with php',
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
-            href: 'https://something.com',
-            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT6EKwSZtkv_Wyq-dxiVviQSWwFjPLJ8IGJ-5EaMYBi1l1P61S0&usqp=CAU'
+            href: 'https://github.com/oumoussa98/blog-with-php',
+            img: 'https://raw.githubusercontent.com/oumoussa98/blog-with-php/master/screenshots/screenshot1.PNG'
           },
+          
           {
-            headline: 'Android app',
+            title: 'Ourika blog',
+            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
+            href: 'https://github.com/oumoussa98/Blog-laravel',
+            img: "https://raw.githubusercontent.com/oumoussa98/Blog-laravel/master/screenshots/screenshot1.PNG"   
+          },
+        {
+            title: 'Android app',
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
             href: 'https://something.com',
-           img: 'https://i.pcmag.com/imagery/articles/06iVYK5P05qeiONvmtOi7s6-11.fit_scale.size_2698x1517.v1569483964.jpg'
+            img: 'https://i.pcmag.com/imagery/articles/06iVYK5P05qeiONvmtOi7s6-11.fit_scale.size_2698x1517.v1569483964.jpg'
           },
-          {
-            headline: 'Ourika blog',
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
-            href: 'https://something.com',
-            img: '/images/screenshot7.png'
-          },
-        ],
-
+      ],
   }),
 }
 </script>
+
+<style scoped>
+
+.display-3 {
+  text-align: center;
+}
+
+.card {
+  width: 100%;
+  height: 420px;
+  text-align: center;
+  border-radius: 6px;
+  margin: 30px 0;
+  box-shadow: 0px 4px 10px var(--color);
+}
+.card-title {
+  min-height: 50px ;
+  padding: 10px;
+}
+.card-image img {
+  width: 100%;
+  height: 200px;
+}
+#card-links  {
+  float: left ;
+  margin: 10px 10px 0px 20px;  
+}
+#card-links a  {
+  padding: 8px;
+  color: rgb(7, 165, 170);
+  cursor: pointer;
+  text-decoration: none;
+  border-radius:  6px;
+}
+#card-links a:hover {
+    background-color: rgba(170, 164, 164, 0.171);
+    transition: all 0.4s;
+}
+  
+</style>
