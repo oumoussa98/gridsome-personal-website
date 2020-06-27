@@ -14,10 +14,16 @@
                 {{ new Date().getFullYear() }} — <strong>Oumoussa</strong>
             </li>
             <li>
-                Open sourced on <i class="fab fa-github"></i>
+                Open sourced on
+                <a target="_blanck" href="https://github.com/oumoussa98/gridsome-personal-website">
+                    <i class="fab fa-github"></i>
+                </a>
             </li>
             <li>
-                Deployed on <g-image alt="netlify icon" src="~/assets/images/netlify.svg" width="20"/>
+                Deployed on 
+                <a target="_blanck" href="https://www.netlify.com/">
+                    <g-image alt="netlify icon" src="~/assets/images/netlify.svg" width="20"/>
+                </a> 
             </li>
         </div>
     </div>  
@@ -73,4 +79,5 @@ export default {
     list-style: none;
     display: inline-block;
 }
+a { color: #34495e; }
 </style>
