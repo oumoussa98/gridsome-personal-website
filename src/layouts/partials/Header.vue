@@ -43,7 +43,7 @@
               </div>
               <!-------- Links area -------->
               <div>
-                    <button class="button-drawer" @click="toggle" >
+                    <button class="button-drawer" v-on:click="drawer=!drawer" >
                         <i class="fa fa-bars"></i>
                     </button>  
 
@@ -55,7 +55,7 @@
                           <g-link class="g-link" :to="other.to">{{other.name}}</g-link>
                         </li>
                         <li>              
-                          <button v-on:click="modeToggler"><i :class="fa"></i></button>
+                          <button v-on:click="setModeDarkLight"><i :class="fa"></i></button>
                         </li> 
                     </div>
                 </div>
@@ -105,6 +105,7 @@ export default {
                 window.getComputedStyle(document.documentElement).getPropertyValue(cssVar);
                 document.documentElement.style.setProperty(cssVar, newValue);
             },
+
        // get cookies by its name
        getCookie(cname) 
             {
@@ -122,6 +123,7 @@ export default {
                     }
                     return "";
             },
+
        // create a new cookie
        setCookie(cname, cvalue, exdays) 
             {
@@ -130,11 +132,7 @@ export default {
             var expires = "expires="+ d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
             },
-       // toggle links display in mobile devices
-       toggle() 
-            { 
-            this.drawer = !this.drawer ;
-            },
+
        // toggle between dark and light mode
        setModeDarkLight() 
             {
