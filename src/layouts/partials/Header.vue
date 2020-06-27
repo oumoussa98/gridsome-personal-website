@@ -157,10 +157,11 @@ export default {
       
    },
       // vueJs created function
-      created() 
+      mounted() 
             {
                 // get user settings of dark and light mode and load it
-                let bg = this.getCookie('oumoussaBg'), color = this.getCookie('oumoussaColor') ;
+                let bg = this.getCookie('oumoussaBg');
+                let color = this.getCookie('oumoussaColor') ;
                     if(bg && color)    
                         {
                             if(bg === '#444647') this.fa = 'fas fa-lightbulb' ;
