@@ -6,7 +6,7 @@
         <p class="display-3">I'm Abdelouahed Oumoussa </p>
         <p class="bio">
         A self-taught full-stack web developer and mobile apps developer with native script 
-        I'v been coding since 2019 with different societies and different companies 
+        I'v been coding since 2020 with different societies and different companies 
         I love building side projects. during this period i build a bunch of different 
         websites you can find them in my <a href="https://github.com/oumoussa98">
           GitHub<i class="fas fa-externel-link"></i></a> repository
@@ -29,12 +29,15 @@
 </div>
 
   <skills/>
+  <whatIBuilt/>
 
   </Layout>
 </template>
 
 <script>
 import skills from '~/components/homeComponents/Skills'
+import whatIBuilt from '~/components/homeComponents/whatIBuilt'
+
 export default {
 
   metaInfo: {
@@ -43,6 +46,7 @@ export default {
 
   components: {
      skills,
+     whatIBuilt,
   },
 }
 </script>
@@ -62,6 +66,7 @@ export default {
     padding: 15px 35px;
     color: white;
     box-shadow: 0px 10px 8px -2px rgb(142, 218, 182)  ;
+    transition: all 0.5s;
       
 } 
   .hire:hover {
@@ -79,6 +84,7 @@ export default {
       text-align: center;
       margin-top: 10px;
       box-shadow: 0px 10px 8px -2px rgb(124, 159, 211)  ;
+      transition: all 0.5s;
       
 }
   .cv:hover {
