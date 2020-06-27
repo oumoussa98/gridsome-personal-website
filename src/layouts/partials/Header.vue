@@ -65,7 +65,7 @@
     </div>
 </template>
 
-<script>
+<script defer>
 export default {
 
     data: () => ({
