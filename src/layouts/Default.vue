@@ -2,7 +2,6 @@
 <div class="layout">
 
   <div class="header">
-    <Header />
   </div>
    
   <div class="content"> 
@@ -30,12 +29,11 @@ query {
 </static-query>
 
 <script>
-import Header from '~/layouts/partials/Header'
+
 import Footer from '~/layouts/partials/Footer'
 
 export default {
   components: {
-    Header,
     Footer
   }
 }
