@@ -41,11 +41,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .content {
   margin-top: 80px;
-  height: 1200px;
 }
 
 
