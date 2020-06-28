@@ -11,7 +11,6 @@
                 <h2>Full stack web developer</h2>
                 Full stack web developer with laravel framework
                 for backend and vuejs for frontend
-                for CMS i'm familiar with drupal and wordpress
             </span>
         </div>
         <div class="col-md-4">
@@ -22,7 +21,7 @@
             <span>
                 <h2>UI and UX</h2>
                 Build attratcive user intefaces and provide best user experience
-                using lattest and hottest technologies and frameworks
+                using lattest technologies
             </span>
         </div>
         <div class="col-md-4">
@@ -32,8 +31,8 @@
             />
             <span>
                <h2>Mobile apps developer</h2>
-               Mobile apps development with hight performance and a super 
-               integration with your website using nativeScript that support vuejs
+               Mobile apps development with hight performance 
+               using nativeScript that support vuejs
                for mobile apps development
             </span>
         </div>
