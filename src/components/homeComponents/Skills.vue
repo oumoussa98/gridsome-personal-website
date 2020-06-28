@@ -9,8 +9,10 @@
             />
             <span>
                 <h2>Full stack web developer</h2>
-                Full stack web developer with laravel framework
-                for backend and vuejs for frontend
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Animi, aspernatur. Beatae atque ad consequatur est velit, 
+                laborum voluptatem perspiciatis dolorem
+                Vel delectus est minus dolores deserunt saepe qua.
             </span>
         </div>
         <div class="col-md-4">
@@ -20,8 +22,10 @@
             />
             <span>
                 <h2>UI and UX</h2>
-                Build attratcive user intefaces and provide best user experience
-                using lattest technologies
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Animi, aspernatur. Beatae atque ad consequatur est velit, 
+                laborum voluptatem perspiciatis dolorem
+                Vel delectus est minus dolores deserunt saepe qua.
             </span>
         </div>
         <div class="col-md-4">
@@ -30,10 +34,11 @@
              class="img"
             />
             <span>
-               <h2>Mobile apps developer</h2>
-               Mobile apps development with hight performance 
-               using nativeScript that support vuejs
-               for mobile apps development
+                <h2>Mobile apps developer</h2>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Animi, aspernatur. Beatae atque ad consequatur est velit, 
+                laborum voluptatem perspiciatis dolorem
+                Vel delectus est minus dolores deserunt saepe qua.
             </span>
         </div>
       </div>
