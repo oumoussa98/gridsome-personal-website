@@ -146,7 +146,7 @@ export default {
                                     // Set cookies
                                     this.setCookie('bg','#444647',7)  ;
                                     this.setCookie('bg2','#5b5d5e',7)  ;
-                                    this.setCookie('cColor','rgb(189, 184, 184)',7)  ;                             
+                                    this.setCookie('color','rgb(189, 184, 184)',7)  ;                             
 
                                     }
                     else 
