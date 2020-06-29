@@ -76,7 +76,7 @@ export default {
   text-align: center;
   border-radius: 6px;
   margin: 30px 0;
-  box-shadow: 0px 4px 10px var(--color);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
 }
 .card-title {
   min-height: 50px ;

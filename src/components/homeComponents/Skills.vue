@@ -52,6 +52,7 @@
     padding: 200px 0;
     clip-path: polygon(0% 10%, 100% 0px, 100% 88%, 0px 100%);
     background-color: var(--bg2);
+    transition: background-color 0.5s ease-in-out;
 }
  .display-3 {
      text-align: center;

@@ -60,6 +60,7 @@ export default {
     background-color: var(--color) ;
     color: var(--bg) ;
     text-align: center;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .social-media-links a i {
@@ -72,6 +73,7 @@ export default {
     min-height: 40px ;
     text-align: center;
     background-color: rgb(9, 172, 118);
+    transition: background-color 0.5s ease-in-out;
 }
 
 .date .text li {

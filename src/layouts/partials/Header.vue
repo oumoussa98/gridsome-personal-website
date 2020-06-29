@@ -197,7 +197,8 @@ export default {
        position: fixed;
        top: 0;
        background-color: var(--bg);
-       box-shadow: 5px -10px 10px 10px var(--color);
+       box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+       transition: background-color 0.5s ease-in-out;
    }
    .drop-down {
      position: absolute;
