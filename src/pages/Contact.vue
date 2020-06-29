@@ -64,6 +64,7 @@ input[type=name],[type=email] {
   outline: none;
   background-color: var(--bg);
   color: var(--color);
+  transition: background-color 0.5s ease-in-out;
 
 }
 .textarea {
