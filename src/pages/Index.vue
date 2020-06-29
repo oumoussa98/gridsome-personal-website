@@ -65,12 +65,12 @@ export default {
     background-color: rgb(36, 218, 148);
     padding: 15px 35px;
     color: white;
-    box-shadow: 0px 10px 8px -2px rgb(142, 218, 182)  ;
-    transition: all 0.5s;
+    box-shadow: 0px 10px 10px -1px rgba(142, 218, 183, 0.7)  ;
+    transition: box-shadow 0.7s;
       
 } 
   .hire:hover {
-        box-shadow: 0px 5px 8px -1px rgb(124, 165, 146) ;
+        box-shadow: none ;
 }
   .cv-div { display: inline-block; }
   .cv {
@@ -84,12 +84,12 @@ export default {
       color: white;
       text-align: center;
       margin-top: 10px;
-      box-shadow: 0px 10px 8px -2px rgb(124, 159, 211)  ;
-      transition: all 0.5s;
+      box-shadow: 0px 10px 10px -1px rgb(124, 159, 211, 0.65)  ;
+      transition: box-shadow 0.7s;
       
 }
   .cv:hover {
-          box-shadow: 0px 5px 8px -1px rgb(124, 136, 155);
+          box-shadow: none ;
 }
   .bio {
 
