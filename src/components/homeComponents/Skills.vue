@@ -1,5 +1,6 @@
 <template>
-  <div class="skills container">
+<div class="skills">
+  <div class="container">
       <div class="display-3"><p> My Skills </p></div>
       <div class="row">
         <div class="col-md-4">
@@ -42,10 +43,16 @@
             </span>
         </div>
       </div>
+  </div>
   </div>   
 </template>
 
 <style scoped>
+.skills {
+    padding: 200px 0;
+    clip-path: polygon(0% 10%, 100% 0px, 100% 88%, 0px 100%);
+    background-color: var(--bg2);
+}
  .display-3 {
      text-align: center;
  }
