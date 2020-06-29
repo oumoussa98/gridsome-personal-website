@@ -49,7 +49,7 @@
 
 <style scoped>
 .skills {
-    padding: 200px 0;
+    padding: 100px 0 200px 0;
     clip-path: polygon(0% 10%, 100% 0px, 100% 88%, 0px 100%);
     background-color: var(--bg2);
     transition: background-color 0.5s ease-in-out;
