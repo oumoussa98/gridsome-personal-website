@@ -16,14 +16,14 @@
     <div>
       <div class="hire-div">
             <g-link to="/contact">
-            <button class="hire">hire me</button>
+            <button class="hire">Hire me</button>
             </g-link>
       </div>
       <div class="cv-div">
-            <button href="https://www.doyoubuzz.com/us/" target="_blanck" class="cv" >
-               see my resume
+            <a href="#my-projects" target="_blanck" class="cv" v-smooth-scroll="{ duration: 3000, offset: -50 }">
+               See my work
               <i class="fas fa-externel-link"></i>
-            </button>
+            </a>
       </div>
     </div>
 </div>
@@ -77,6 +77,7 @@ export default {
       min-width: 170px;
       margin: 10px 10px 10px 0;
       border: none;
+      text-decoration: none;
       border-radius: 4px;
       background-color: rgb(12, 148, 226);
       padding: 15px 35px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="skills container" >
+  <div class="skills container" id="my-projects">
       <div class="display-3" ><p> What I Built </p></div>
       <div class="row">
         <div v-for="(project,i) in projects" :key="i"  >
