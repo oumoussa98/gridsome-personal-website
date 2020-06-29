@@ -1,5 +1,6 @@
 :root {
     --bg: white;
+    --bg2: rgb(240, 243, 241) ;
     --color: #34495e ;
 }
 *{
