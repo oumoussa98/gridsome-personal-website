@@ -139,34 +139,45 @@ export default {
                     if(this.fa === 'far fa-lightbulb')
                                     { 
                                     this.fa = 'fas fa-lightbulb' ;
+                                    // Set css variables
                                     this.setCssVar('--bg','#444647') ;
+                                    this.setCssVar('--bg2','#5b5d5e') ; 
                                     this.setCssVar('--color','rgb(189, 184, 184)') ; 
-                                    this.setCookie('oumoussaBg','#444647',7)  ;
-                                    this.setCookie('oumoussaColor','rgb(189, 184, 184)',7)  ;                             
+                                    // Set cookies
+                                    this.setCookie('bg','#444647',7)  ;
+                                    this.setCookie('bg2','#5b5d5e',7)  ;
+                                    this.setCookie('cColor','rgb(189, 184, 184)',7)  ;                             
 
                                     }
                     else 
                                     {
                                         this.fa = 'far fa-lightbulb' ; 
+                                        // Set css variables
                                         this.setCssVar('--bg','white') ;
-                                        this.setCssVar('--color','#34495e')
-                                        this.setCookie('oumoussaBg','white',7)  ;
-                                        this.setCookie('oumoussaColor','#34495e',7)  ;
+                                        this.setCssVar('--bg2','rgb(240, 243, 241)') ;
+                                        this.setCssVar('--color','#34495e') ;
+                                        // Set cookies
+                                        this.setCookie('bg','white',7)  ;
+                                        this.setCookie('bg2','rgb(240, 243, 241)',7)  ;
+                                        this.setCookie('color','#34495e',7)  ;
                                     } 
             },
       
    },
-      // vueJs created function
+      // vueJs mounted function
       mounted() 
             {
                 // get user settings of dark and light mode and load it
-                let bg = this.getCookie('oumoussaBg');
-                let color = this.getCookie('oumoussaColor') ;
-                    if(bg && color)    
+                let bg = this.getCookie('bg');
+                let bg2 = this.getCookie('bg2');
+                let color = this.getCookie('color') ;
+                    if(bg && bg2 && color)    
                         {
                             if(bg === '#444647') this.fa = 'fas fa-lightbulb' ;
                             else this.fa = 'far fa-lightbulb' ;
+                            // Set css variables
                             this.setCssVar('--bg',bg) ;
+                            this.setCssVar('--bg2',bg2) ;
                             this.setCssVar('--color',color) ;
                         }
                 // check the screen size
