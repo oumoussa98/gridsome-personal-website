@@ -40,7 +40,8 @@ export default {
 		min-width: 200px;
 		max-width: 980px;
 		margin: 0 auto;
-		padding: 45px;
+        padding: 45px;
+        color: var(--color);
 	}
 
 	@media (max-width: 767px) {
