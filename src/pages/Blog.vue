@@ -25,7 +25,7 @@
         node {
           title
           path
-          img
+          img (quality: 50)
         }
       }
     }
