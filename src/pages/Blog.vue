@@ -1,0 +1,54 @@
+<template>
+<layout>
+    <div class="container">
+        <div class="row">
+            <div v-for="{ node } in $page.allPost.edges" :key="node.id" class="col-md-6">
+                <g-link id="g-link" :to="node.path" >
+                    <Card
+                        :title="node.title"
+                        description="Lorem ipsum, dolor sit amet consectetur 
+                                     adipisicing elit ipsa quos officiis dolorum, unde eius
+                                     beatae cumque iusto maxime"
+                        img="https://raw.githubusercontent.com/oumoussa98/blog-with-php
+                            /master/screenshots/screenshot1.PNG"
+                    />
+                </g-link>
+            </div>   
+         </div>
+    </div>
+</layout>
+</template>
+
+<page-query>
+  query Blog {
+    allPost: allPost(sortBy: "asc") {
+      edges {
+        node {
+          title
+          path
+        }
+      }
+    }
+  }
+</page-query>
+
+<script>
+import Card from '~/components/PostCard' ;
+export default {
+    metaInfo: {
+        title: 'Blog'
+    },
+
+    components: {
+        Card,
+    }
+
+}
+</script>
+
+<style>
+#g-link {
+    text-decoration: none;
+    color: var(--color) ;
+}
+</style>
