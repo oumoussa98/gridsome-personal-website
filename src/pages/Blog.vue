@@ -9,8 +9,7 @@
                         description="Lorem ipsum, dolor sit amet consectetur 
                                      adipisicing elit ipsa quos officiis dolorum, unde eius
                                      beatae cumque iusto maxime"
-                        img="https://raw.githubusercontent.com/oumoussa98/blog-with-php
-                            /master/screenshots/screenshot1.PNG"
+                        :img="node.img"
                     />
                 </g-link>
             </div>   
