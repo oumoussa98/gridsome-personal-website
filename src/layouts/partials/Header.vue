@@ -181,7 +181,7 @@ export default {
                             this.setCssVar('--color',color) ;
                         }
                 // check the screen size
-                if(window.innerWidth <= 700) this.mobileView = true ;
+                if(window.innerWidth <= 800) this.mobileView = true ;
             },
   
 
@@ -205,9 +205,10 @@ export default {
      display: block;
      width: 120px ;
      background-color: var(--bg);
-     box-shadow: 0px 4px 8px -2px var(--color);
+     box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.3);
      margin: 50px 5px 0 0;
      right: 0 ;
+     transition: background-color 0.5s ease-in-out;
     }
     .drop-down li { 
         list-style-type: none;
@@ -223,6 +224,7 @@ export default {
         background-color: var(--bg);
         color: var(--color);
         outline: none;
+        transition: background-color 0.5s ease-in-out;
     }
    .brand {
         float:left;
@@ -283,7 +285,7 @@ export default {
       list-style: none;
   }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .header {
     display: block;
   }
