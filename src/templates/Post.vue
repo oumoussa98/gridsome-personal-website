@@ -16,7 +16,7 @@
         post: post (path: $path){
         title
         content
-        img (quality: 50)
+        img
     }
 }
        
