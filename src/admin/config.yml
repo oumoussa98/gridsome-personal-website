@@ -3,7 +3,7 @@ backend:
   repo: oumoussa98/gridsome-personal-website
 
 media_folder: "static/uploads"
-public_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "posts"
