@@ -20,7 +20,7 @@
             </g-link>
       </div>
       <div class="cv-div">
-            <a href="#my-projects" target="_blanck" class="cv" v-smooth-scroll="{ duration: 3000, offset: -50 }">
+            <a href="#my-projects" class="cv" v-smooth-scroll="{ duration: 3000, offset: -50 }">
                See my work
               <i class="fas fa-externel-link"></i>
             </a>
