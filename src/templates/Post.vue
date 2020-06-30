@@ -2,7 +2,7 @@
 <layout>
   <div class="container markdown-body">
       <h1>{{$page.post.title}} post</h1>
-      <img :src="$page.post.img" alt="Post image" width="100%" height="250" >
+      <g-image id="img" :src="$page.post.img" alt="Post image" />
       <div v-html="$page.post.content">
       </div>
 
@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css');
 	.markdown-body {
 		box-sizing: border-box;
@@ -47,5 +47,9 @@ export default {
 		.markdown-body {
 			padding: 15px;
 		}
-	}
+    }
+    #img {
+        width: 100%;
+        height: 150px;
+    }
 </style>

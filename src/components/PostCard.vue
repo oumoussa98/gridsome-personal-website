@@ -1,7 +1,7 @@
 <template>
 <div class="card">
     <div class="card-image">
-        <img alt="Project screenshot" v-bind:src="img">
+        <g-image alt="Post Image" v-bind:src="img"/>
     </div>
     <div class="card-title">
         <h2>{{ title }}</h2>
