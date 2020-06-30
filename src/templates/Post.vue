@@ -2,7 +2,9 @@
 <layout>
   <div class="container markdown-body">
       <h1>{{$page.post.title}} post</h1>
-      <g-image id="img" :src="$page.post.img" alt="Post image" />
+      <div class="img">
+                <g-image id="img" :src="$page.post.img" alt="Post image" />
+      </div>
       <div v-html="$page.post.content">
       </div>
 
@@ -52,5 +54,9 @@ export default {
     #img {
         width: 100%;
         height: 150px;
+        
+    }
+    .img {
+        padding: 15px 0px;
     }
 </style>
