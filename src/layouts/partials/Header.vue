@@ -18,15 +18,8 @@
                  </ul>
               </div>
               <!------- other things area ------>
-              <div class="other" v-if="!mobileView">                  
-                 <ul>  
-                     <li>              
-                        <button v-on:click="setModeDarkLight"><i :class="fa"></i></button>
-                     </li> 
-                     <li v-for="(other, i) in others" :key="i">
-                         <g-link class="g-link" :to="other.to">{{other.name}}</g-link>
-                     </li>
-                 </ul>
+              <div class="other" v-if="!mobileView">             
+                    <button v-on:click="setModeDarkLight"><i :class="fa"></i></button>
               </div>
       </div>
 
@@ -51,10 +44,7 @@
                         <li v-for="(link, i) in links" :key="i" >
                            <g-link class="g-link" :to="link.to">{{link.name}}</g-link>
                         </li>
-                        <li v-for="(other, i) in others" :key="i+10">
-                          <g-link class="g-link" :to="other.to">{{other.name}}</g-link>
-                        </li>
-                        <li>              
+                        <li class="dark-light-font">              
                           <button v-on:click="setModeDarkLight"><i :class="fa"></i></button>
                         </li> 
                     </div>
@@ -80,19 +70,20 @@ export default {
         {name:'Home',to:'/'},
         {name:'About',to:'/about'},
         {name:'Contact',to:'/contact'},
+        {name:'Blog',to:'/blog'},
         //
     ],
 
     //Other ---------------------
-    others: [
-        //
-    ],
+    // others: [
+    //     //
+    // ],
     // for mobile devices
     mobileView: false ,
     drawer: false ,
 
     // light and dark mode 
-     fa: 'far fa-lightbulb',
+     fa: 'fas fa-moon',
 
 
     }),
@@ -136,9 +127,9 @@ export default {
        // toggle between dark and light mode
        setModeDarkLight() 
             {
-                    if(this.fa === 'far fa-lightbulb')
+                    if(this.fa === 'fas fa-moon')
                                     { 
-                                    this.fa = 'fas fa-lightbulb' ;
+                                    this.fa = 'fas fa-sun' ;
                                     // Set css variables
                                     this.setCssVar('--bg','#444647') ;
                                     this.setCssVar('--bg2','#5b5d5e') ; 
@@ -151,7 +142,7 @@ export default {
                                     }
                     else 
                                     {
-                                        this.fa = 'far fa-lightbulb' ; 
+                                        this.fa = 'fas fa-moon' ; 
                                         // Set css variables
                                         this.setCssVar('--bg','white') ;
                                         this.setCssVar('--bg2','rgb(240, 243, 241)') ;
@@ -173,8 +164,8 @@ export default {
                 let color = this.getCookie('color') ;
                     if(bg && bg2 && color)    
                         {
-                            if(bg === '#444647') this.fa = 'fas fa-lightbulb' ;
-                            else this.fa = 'far fa-lightbulb' ;
+                            if(bg === '#444647') this.fa = 'fas fa-sun' ;
+                            else this.fa = 'fas fa-moon' ;
                             // Set css variables
                             this.setCssVar('--bg',bg) ;
                             this.setCssVar('--bg2',bg2) ;
@@ -192,8 +183,9 @@ export default {
 <style scoped >
    .header {
        width: 100%;
-       display: flex;
+       display: inline-block;
        align-items: center;
+       align-content: center;
        position: fixed;
        top: 0;
        background-color: var(--bg);
@@ -216,6 +208,9 @@ export default {
         justify-items: center;
         padding: 10px 6px;
     }
+    .drop-down li button i {
+        font-size: 20px;
+    }
     .button-drawer {
         float:right ;
         margin: 10px 10px 0 0 ;
@@ -229,7 +224,6 @@ export default {
    .brand {
         float:left;
         min-width: 25%;
-        margin-left: 10px;
         clear: left;
    }
    .brand-g-link {
@@ -237,6 +231,7 @@ export default {
       color: var(--color);
       font-size: 20px;
       padding-top: 100px;
+
   }
   .brand-img {transition: all 1s;}
   .brand-img:hover {
@@ -244,29 +239,28 @@ export default {
       transform: rotate(360deg);
   }
    .links {
-       text-align: center;
-       width: 50%;
-   }
-   .other {
        display: inline-block;
-       text-align: right;
-       width: 25%;
-       margin-right: 10px;
+       text-align: center;
+       margin: 6px 0 0 0;
+       min-width: 40%;
    }
-   .other ul li { 
-       display: inline-block; 
-       margin: 0 10px;
-       padding: 0 5px ;
-   }
-   .other ul li button i {
-       font-size: 25px;
-   }
-
-    .links ul li {
+   .links ul li {
       display: inline-block;
-      margin: 0 15px;
+      margin: 0 8px;
       padding: 0 5px ;
   }
+   .other {
+       width: 10%;
+       float: right;
+       margin: 15px 20px 0 0;
+   }
+   .other button {
+       float: right ;
+   }
+   .other button i {
+       font-size: 25px;
+       float: right;
+   } 
   .g-link {
       text-decoration: none;
       color: var(--color);
