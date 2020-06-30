@@ -14,7 +14,7 @@
 
 <page-query>
 
-    query Post($path: String) {
+    query Post($path: String!) {
         post: post (path: $path){
         title
         content
