@@ -55,10 +55,12 @@ export default {
 
   .home {
       min-height: 510px;
-}
-  .hire-div { display: inline-block; }
+  }
+  .hire-div { 
+    display: inline-block; 
+    margin: 10px 10px 20px 0; 
+  }
   .hire {
-    margin: 10px 10px 10px 0;
     min-width: 170px;
     border: none;
     border-radius: 4px;
@@ -68,31 +70,33 @@ export default {
     box-shadow: 0px 10px 10px -1px rgba(142, 218, 183, 0.7)  ;
     transition: box-shadow 0.7s;
       
-} 
+  } 
   .hire:hover {
         box-shadow: none ;
-}
-  .cv-div { display: inline-block; }
+  }
+  .cv-div { 
+      display: inline-block;
+      margin: 10px 0 0 0 ;
+  }
   .cv {
       min-width: 170px;
-      margin: 10px 10px 10px 0;
       border: none;
       text-decoration: none;
       border-radius: 4px;
       background-color: rgb(12, 148, 226);
-      padding: 15px 35px;
+      padding: 15px 40px;
       color: white;
       text-align: center;
       margin-top: 10px;
       box-shadow: 0px 10px 10px -1px rgb(124, 159, 211, 0.65)  ;
       transition: box-shadow 0.7s;
       
-}
+  }
   .cv:hover {
           box-shadow: none ;
-}
+  }
   .bio {
 
     font-size: 25px;
-}
+  }
 </style>
