@@ -25,6 +25,7 @@
         node {
           title
           path
+          img
         }
       }
     }
