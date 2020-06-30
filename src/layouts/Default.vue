@@ -1,13 +1,14 @@
 <template>
 <div class="layout">
-
+  
   <div class="header">
     <Header />
   </div>
-   
+ <transition name="fade" appear>
   <div class="content"> 
     <slot/>
   </div>
+ </transition>
 
   <div class="footer">
     <Footer/>
@@ -46,6 +47,13 @@ export default {
 .content {
   margin-top: 80px;
   min-height: 100vh;
+}
+.fade-enter-active {
+  transition: opacity 0.6s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 
 
