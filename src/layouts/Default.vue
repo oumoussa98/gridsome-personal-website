@@ -49,7 +49,7 @@ export default {
   min-height: 100vh;
 }
 .fade-enter-active {
-  transition: opacity 0.6s;
+  transition: opacity 0.8s;
 }
 
 .fade-enter {
