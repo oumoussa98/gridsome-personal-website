@@ -3,7 +3,7 @@ title: Blog Post One
 img: /uploads/1.jpg
 ---
 ### Markdown Cheat Sheet
-```
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
