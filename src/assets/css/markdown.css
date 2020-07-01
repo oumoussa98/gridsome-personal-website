@@ -681,7 +681,8 @@
 .markdown-body h1,
 .markdown-body h2 {
   padding-bottom: .3em;
-  border-bottom: 1px solid #eaecef;
+  border-bottom: 2px solid var(--bg2);
+  transition: border-bottom 0.5s;
 }
 
 .markdown-body h2 {
