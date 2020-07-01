@@ -1,22 +1,49 @@
 <template>
 <layout>
 <div class="container contact">
-  <form action="#">
-    <label for="name"></label>
-    <input type="name" id="name" name="name" placeholder="Your name..">
+  <div v-if="successMessage" class="success col-md-8 offset-2">
+    <p>
+      Successfully submited
+    </p>
+  </div>
+  <div v-if="errorMessage" class="success col-md-8 offset-2">
+    <p>
+      {{errorMessage}}
+    </p>
+  </div>
+  <form 
+  name="contact"
+  method="post"
+  v-on:submit.prevent="handleSubmit"
+  action="/success/"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="contact" />
+    <p hidden>
+    <label>
+      Don’t fill this out: <input name="bot-field" />
+    </label>
+    </p>
+    <div class="sender-info">
+      <div>
+        <label for="name" class="label" ></label>
+        <input placeholder="Your name..." type="text" name="name" v-model="formData.name" />
+      </div>
+      <div>
+        <label for="email"></label>
+        <input placeholder="Your email" type="email" name="email" v-model="formData.email" />
+      </div>
+    </div>
 
-    <label for="email"></label>
-    <input type="email" id="email" name="email" placeholder="Your email..">
+    <div class="message-wrapper">
+      <label for="message"></label>
+      <textarea rows="4" placeholder="Your Message..." name="message" v-model="formData.message"></textarea>
+    </div>
 
-
-    <label for="message"></label>
-    <span class="textarea" role="textbox" id="message" name="message" contenteditable>
-        
-    </span>
-
-    <input type="submit" value="Send meassage">
-    <!-- <input type="reset" value="Reset form"> -->
+    <button type="submit">Submit form</button>
   </form>
+
   <div>
     <p class="display-3">
       Or you can text me on
@@ -43,9 +70,37 @@
 
 <script>
   export default {
-      metaInfo: {
+  // Meta Info ====================
+  metaInfo: {
     title: 'Contact'
+  },
+  // Data =========================
+  data: () => ({
+    formData: {},
+    successMessage: false ,
+    errorMessage: null ,
+  }),
+  // Methods ======================
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+      .then(() => this.seccessMessage = true)
+      .catch(error => this.errorMessage = error)
   }
+},
+
 }
 </script>
 
@@ -53,9 +108,14 @@
 .container {
   padding: 20px;
 }
-input[type=name],[type=email] {
+.success {
   width: 100%;
-  padding: 15px;
+  height: 80px;
+  background-color: rgba(93, 230, 104, 0.8);
+}
+input[type=text],[type=email] {
+  width: 100%;
+  padding: 10px;
   border: none;
   border-bottom: 1px solid grey;
   margin-top: 6px;
@@ -65,36 +125,31 @@ input[type=name],[type=email] {
   background-color: var(--bg);
   color: var(--color);
   transition: background-color 0.5s ease-in-out;
-
 }
-.textarea {
+textarea {
   display: block;
   width: 100%;
-  overflow: hidden;
   resize: both;
   min-height: 40px;
   line-height: 20px;
   border: none;
   border-bottom: 1px solid grey;
-  padding: 15px;
+  padding: 10px;
   margin: 15px 0;
   outline: none;
-
 }
-.textarea[contenteditable]:empty::before {
-  content: "your message";
-  color: var(--color);
+::placeholder { 
+  color: var(--color); 
 }
-
-::placeholder { color: var(--color); }
-input[type=submit] {
-  background-color: #4CAF50;
+button[type=submit] {
+  background-color: #07af4d;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
+  transition: box-shadow 0.4s;
 }
 /* input[type=reset] {
   background-color: #f38b15;
@@ -106,8 +161,8 @@ input[type=submit] {
   margin: 0 15px;
   outline: none;
 } */
-input[type=submit]:hover, input[type=reset]:hover {
-  box-shadow: 0px 2px 4px var(--color);
+button[type=submit]:hover, input[type=reset]:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
  .display-3 {
     text-align: center;
