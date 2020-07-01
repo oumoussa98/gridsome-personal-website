@@ -1,6 +1,6 @@
 <template>
 <layout>
-  <div class="container markdown-body">
+  <div id="markdown" class="container markdown-body">
       <h1>{{$page.post.title}} post</h1>
       <div class="img">
                 <g-image id="img" :src="$page.post.img" alt="Post image" />
@@ -24,7 +24,7 @@
        
 </page-query>
 
-<script>
+<script defer>
 export default {
     metaInfo() {
         return {
@@ -36,7 +36,6 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css');
 	.markdown-body {
 		box-sizing: border-box;
 		min-width: 200px;
@@ -44,8 +43,7 @@ export default {
 		margin: 0 auto;
         padding: 45px;
         color: var(--color);
-	}
-
+    }
 	@media (max-width: 767px) {
 		.markdown-body {
 			padding: 15px;
@@ -53,10 +51,10 @@ export default {
     }
     #img {
         width: 100%;
-        height: 150px;
-        
+        height: 150px;   
     }
     .img {
         padding: 15px 0px;
     }
+    
 </style>

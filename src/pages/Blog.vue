@@ -32,7 +32,7 @@
   }
 </page-query>
 
-<script>
+<script defer>
 import Card from '~/components/PostCard' ;
 export default {
     metaInfo: {
