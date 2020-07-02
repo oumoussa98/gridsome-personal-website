@@ -85,6 +85,7 @@
   // Methods ======================
   methods: {
     Submited() {
+      Object.keys(this.formData).forEach(k => delete this.formData[k]) ;
       contact.reset() ;
       this.successMessage = true ;
     },
