@@ -1,6 +1,6 @@
 ---
 title: Blog Post One
-img: /uploads/1.jpg
+img: /posts-images/1.jpg
 ---
 ### Markdown Cheat Sheet
 ```json
