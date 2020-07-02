@@ -6,7 +6,7 @@
       Successfully submited
     </p>
   </div>
-  <div v-if="errorMessage" class="success col-md-8 offset-2">
+  <div v-if="errorMessage" class="error col-md-8 offset-2">
     <p>
       {{errorMessage}}
     </p>
@@ -41,7 +41,7 @@
       <textarea rows="4" placeholder="Your Message..." name="message" v-model="formData.message"></textarea>
     </div>
 
-    <button type="submit">Submit form</button>
+    <button type="submit">Send Message</button>
   </form>
 
   <div>
@@ -96,9 +96,12 @@
           ...this.formData,
         }),
       })
-      .then(() => this.seccessMessage = true)
+      .then(() => this.successMessage = true )
       .catch(error => this.errorMessage = error)
+
   }
+  
+
 },
 
 }
@@ -109,10 +112,27 @@
   padding: 20px;
 }
 .success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 80px;
-  background-color: rgba(93, 230, 104, 0.8);
+  height: 60px;
+  margin: 0 0 30px 0;
+  background-color: rgba(93, 230, 104, 0.6);
+  border-radius: 6px;
+  color: black;
 }
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(230, 93, 93, 0.6);
+  border-radius: 10px;
+  color: black;
+}
+
 input[type=text],[type=email] {
   width: 100%;
   padding: 10px;
@@ -137,6 +157,9 @@ textarea {
   padding: 10px;
   margin: 15px 0;
   outline: none;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.5s ease-in-out;
 }
 ::placeholder { 
   color: var(--color); 
