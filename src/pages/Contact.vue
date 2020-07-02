@@ -70,7 +70,7 @@
 
 </template>
 
-<script>
+<script defer>
   export default {
   // Meta Info ====================
   metaInfo: {
