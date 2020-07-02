@@ -34,14 +34,14 @@ export default {
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit
                          ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime `,
             href: 'https://github.com/oumoussa98/tool-for-management',
-            img: '/uploads/screenshot1.PNG'
+            img: '/uploads/screenshot1.png'
           },
           {
             title: 'Blog with php',
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit 
                           ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime `,
             href: 'https://github.com/oumoussa98/blog-with-php',
-            img: 'uploads/screenshot2.PNG'
+            img: 'uploads/screenshot2.png'
           },
           
           {
@@ -49,7 +49,7 @@ export default {
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit
                           ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime `,
             href: 'https://github.com/oumoussa98/Blog-laravel',
-            img: "uploads/screenshot3.PNG"   
+            img: "uploads/screenshot3.png"   
           },
         {
             title: 'Android app',
