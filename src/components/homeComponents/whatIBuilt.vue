@@ -31,26 +31,30 @@ export default {
         projects: [
           {
             title: 'Tool for management ',
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
+            description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit
+                         ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime `,
             href: 'https://github.com/oumoussa98/tool-for-management',
-            img: 'https://raw.githubusercontent.com/oumoussa98/tool-for-management/master/screenshots/screenshot1.PNG'
+            img: '/uploads/screenshot1.PNG'
           },
           {
             title: 'Blog with php',
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
+            description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit 
+                          ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime `,
             href: 'https://github.com/oumoussa98/blog-with-php',
-            img: 'https://raw.githubusercontent.com/oumoussa98/blog-with-php/master/screenshots/screenshot1.PNG'
+            img: 'uploads/screenshot2.PNG'
           },
           
           {
             title: 'Ourika blog',
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
+            description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit
+                          ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime `,
             href: 'https://github.com/oumoussa98/Blog-laravel',
-            img: "https://raw.githubusercontent.com/oumoussa98/Blog-laravel/master/screenshots/screenshot1.PNG"   
+            img: "uploads/screenshot3.PNG"   
           },
         {
             title: 'Android app',
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime ',
+            description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit
+                          ipsa quos officiis dolorum, unde eius beatae cumque iusto maxime `,
             href: 'https://something.com',
             img: 'https://i.pcmag.com/imagery/articles/06iVYK5P05qeiONvmtOi7s6-11.fit_scale.size_2698x1517.v1569483964.jpg'
           },
