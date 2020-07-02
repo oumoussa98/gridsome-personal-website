@@ -28,17 +28,17 @@
     <div class="sender-info">
       <div>
         <label for="name" class="label" ></label>
-        <input placeholder="Your name..." type="text" name="name" v-model="formData.name" />
+        <input placeholder="Your name..." type="text" name="name" v-model="formData.name" required/>
       </div>
       <div>
         <label for="email"></label>
-        <input placeholder="Your email" type="email" name="email" v-model="formData.email" />
+        <input placeholder="Your email" type="email" name="email" v-model="formData.email" required/>
       </div>
     </div>
 
     <div class="message-wrapper">
       <label for="message"></label>
-      <textarea rows="4" placeholder="Your Message..." name="message" v-model="formData.message"></textarea>
+      <textarea rows="4" placeholder="Your Message..." name="message" v-model="formData.message" required></textarea>
     </div>
 
     <button type="submit">Send Message</button>
