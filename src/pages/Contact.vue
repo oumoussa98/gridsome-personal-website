@@ -1,10 +1,12 @@
 <template>
 <layout>
 <div class="container contact">
-  <div v-if="successMessage" class="success col-md-8 offset-2">
-    <p>
-      Successfully submited
-    </p>
+  <div v-if="successMessage" >
+    <div class="success col-md-8 offset-2">
+      <p>
+        Successfully submited
+      </p>
+    </div>
   </div>
   <div v-if="errorMessage" class="error col-md-8 offset-2">
     <p>
@@ -82,6 +84,10 @@
   }),
   // Methods ======================
   methods: {
+    Submited() {
+      contact.reset() ;
+      this.successMessage = true ;
+    },
     encode(data) {
       return Object.keys(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -94,12 +100,12 @@
         body: this.encode({
           'form-name': e.target.getAttribute('name'),
           ...this.formData,
-        }),
+        }), 
       })
-      .then(() => this.successMessage = true )
+      .then(() => this.Submited() )
       .catch(error => this.errorMessage = error)
 
-  }
+  },
   
 
 },
@@ -117,7 +123,7 @@
   justify-content: center;
   width: 100%;
   height: 60px;
-  margin: 0 0 30px 0;
+  margin: 0 0 40px 0;
   background-color: rgba(93, 230, 104, 0.6);
   border-radius: 6px;
   color: black;
@@ -128,6 +134,7 @@
   justify-content: center;
   width: 100%;
   height: 60px;
+  margin: 0 0 40px 0;
   background-color: rgba(230, 93, 93, 0.6);
   border-radius: 10px;
   color: black;
