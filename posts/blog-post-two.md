@@ -1,6 +1,6 @@
 ---
 title: Blog post two
-img: https://raw.githubusercontent.com/oumoussa98/gridsome-personal-website/master/static/uploads/2.jpg
+img: /uploads/2.jpg
 date: 2020-06-30T23:46:02.265Z
 ---
 ### Blog Post Number 2

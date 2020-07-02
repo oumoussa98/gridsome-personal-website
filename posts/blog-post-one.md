@@ -1,6 +1,6 @@
 ---
 title: Blog Post One
-img: https://raw.githubusercontent.com/oumoussa98/gridsome-personal-website/master/static/uploads/1.jpg
+img: /uploads/1.jpg
 ---
 ### Markdown Cheat Sheet
 ```json
