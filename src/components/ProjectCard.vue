@@ -4,7 +4,7 @@
         <h3>{{ title }}</h3>
     </div>
     <div class="card-image">
-        <img alt="Project screenshot" v-bind:src="img">
+        <g-image alt="Project screenshot" v-bind:src="img" />
     </div>
     <div class="card-footer">
         <p>
