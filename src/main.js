@@ -16,7 +16,7 @@ export default function (Vue, { router, head, isClient }) {
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900',
+      href: 'https://fonts.googleapis.com/css?family=Roboto:400',
     },
 
   );
