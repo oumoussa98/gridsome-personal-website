@@ -18,7 +18,7 @@
 
 </template>
 
-<script>
+<script defer>
 export default {
     props : {
         title: String ,
