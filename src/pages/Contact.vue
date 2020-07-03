@@ -1,71 +1,67 @@
 <template>
 <layout>
-<div class="container contact">
-  <div v-if="successMessage" >
-    <div class="success col-md-8 offset-2">
-      <p>
-        Successfully submited
-      </p>
-    </div>
-  </div>
-  <div v-if="errorMessage" class="error col-md-8 offset-2">
-    <p>
-      {{errorMessage}}
-    </p>
-  </div>
-  <form 
-  name="contact"
-  method="post"
-  v-on:submit.prevent="handleSubmit"
-  action="/success/"
-  data-netlify="true"
-  data-netlify-honeypot="bot-field"
-  >
-    <input type="hidden" name="form-name" value="contact" />
-    <p hidden>
-    <label>
-      Don’t fill this out: <input name="bot-field" />
-    </label>
-    </p>
-    <div class="sender-info">
-      <div>
-        <label for="name" class="label" ></label>
-        <input placeholder="Your name..." type="text" name="name" v-model="formData.name" required/>
-      </div>
-      <div>
-        <label for="email"></label>
-        <input placeholder="Your email" type="email" name="email" v-model="formData.email" required/>
-      </div>
-    </div>
+    <div class="container contact">
+        <div v-if="successMessage" >
+            <div class="success col-md-8 offset-2">
+                <p> Successfully submited </p>
+            </div>
+            <h3>Thanks for contacting us and don forget to checkout you email !!</h3>
+        </div>
+        <div v-if="errorMessage" class="error col-md-8 offset-2">
+            <p> {{errorMessage}} </p>
+        </div>
+        <form 
+        name="contact"
+        method="post"
+        v-on:submit.prevent="handleSubmit"
+        action="/success/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+            <label>
+            Don’t fill this out: <input name="bot-field" />
+            </label>
+            </p>
+            <div class="sender-info">
+            <div>
+                <label for="name" class="label" ></label>
+                <input placeholder="Your name..." type="text" name="name" v-model="formData.name" required/>
+            </div>
+            <div>
+                <label for="email"></label>
+                <input placeholder="Your email" type="email" name="email" v-model="formData.email" required/>
+            </div>
+            </div>
 
-    <div class="message-wrapper">
-      <label for="message"></label>
-      <textarea rows="4" placeholder="Your Message..." name="message" v-model="formData.message" required></textarea>
+            <div class="message-wrapper">
+            <label for="message"></label>
+            <textarea rows="4" placeholder="Your Message..." name="message" v-model="formData.message" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div>
+            <p class="display-3">
+            Or you can text me on
+            </p>
+            <div>
+                <ul>
+                    <li><i class="fas fa-phone fa-2x"></i>
+                        <p>+212 642823650</p>
+                    </li>
+                    <li><i class="fas fa-envelope fa-2x"></i>
+                        <p>abdelwahd.oumouss@gmail.com</p>
+                    </li>
+                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>marrakech, MA 94126, morocco</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-    <button type="submit">Send Message</button>
-  </form>
-
-  <div>
-    <p class="display-3">
-      Or you can text me on
-    </p>
-    <div>
-        <ul>
-            <!-- <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                <p>marrakech, MA 94126, morocco</p>
-            </li> -->
-            <li><i class="fas fa-phone fa-2x"></i>
-                <p>+212 642823650</p>
-            </li>
-
-            <li><i class="fas fa-envelope fa-2x"></i>
-                <p>abdelwahd.oumouss@gmail.com</p>
-            </li>
-        </ul>
-    </div>
-  </div>
-</div>
 </layout>
 
 </template>
@@ -180,20 +176,11 @@ button[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, background-color 0.4s;
 }
-/* input[type=reset] {
-  background-color: #f38b15;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 0 15px;
-  outline: none;
-} */
 button[type=submit]:hover, input[type=reset]:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+  background-color: #07a147;
 }
  .display-3 {
     text-align: center;
