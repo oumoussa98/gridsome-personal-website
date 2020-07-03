@@ -1,6 +1,7 @@
+/* variable */
 :root {
     --bg: white;
-    --bg2: rgb(240, 243, 241) ;
+    --bg2: #cac7c7 ;
     --color: #34495e ;
 }
 *{
@@ -35,4 +36,53 @@ ul  {
 }
 li {
     list-style: none;
+}
+
+/* key frames */
+@keyframes scaleDiv{
+    0%{
+        transform: rotate(0) scale(0.2);
+        opacity: 0.2;
+        }
+    20%{
+        transform: scale(0.4);
+        opacity: 0.4;
+        }
+    40%{
+        transform: scale(0.6);
+        opacity: 0.6;
+        }
+    60%{
+        transform: scale(0.8);
+        opacity: 0.8;
+        }
+    80%{
+        transform: scale(1);
+        opacity: 1;
+        }
+}
+@keyframes scaleCircles{
+    0%{
+        transform: scale(1);
+        opacity: 0.2;
+        }
+    50%{
+        transform: scale(1.08);
+        opacity: 1;
+        }
+    100%{
+        transform: scale(1);
+        opacity: 0.2;
+        }
+}
+@keyframes translateY{
+    0%{
+        transform: rotate(0) translateY(50vh);
+        }
+    50%{
+        transform: rotate(0) translateY(30vh);
+        }
+    100%{
+        transform: rotate(0) translateY(0);
+        }
 }
