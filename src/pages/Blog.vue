@@ -10,6 +10,7 @@
                                      adipisicing elit ipsa quos officiis dolorum, unde eius
                                      beatae cumque iusto maxime"
                         :img="node.img"
+                        :date="node.date"
                     />
                 </g-link>
             </div>   
@@ -26,6 +27,7 @@
           title
           path
           img
+          date
         }
       }
     }
