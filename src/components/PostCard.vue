@@ -10,6 +10,9 @@
         <p>
             {{description }}
         </p>
+        <h4 style="opacity:0.6">
+          Published at: {{date}}
+        </h4>
     </div>
 </div>
 
@@ -21,6 +24,7 @@ export default {
         title: String ,
         img: String ,
         description: String,
+        date: Date ,
     },
 
 }
