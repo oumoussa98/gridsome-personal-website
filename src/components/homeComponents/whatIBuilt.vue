@@ -4,12 +4,14 @@
       <div class="row">
         <div v-for="(project,i) in projects" :key="i"  >
           <div class="col-md-4">
-            <Card
+            <div :class="{animate: animate}">
+              <Card
             :title="project.title"
             :img="project.img"
             :description="project.description"
             :href="project.href"
             />
+            </div>
           </div>
         </div>
       </div>
@@ -27,6 +29,7 @@ export default {
   },
 // Data ==========================
   data:() => ({
+        animate: false ,
 
         projects: [
           {
@@ -61,6 +64,19 @@ export default {
       ],
   }),
 
+    methods: {
+        handleScroll() {
+          let y = scrollY ;
+          if( y >= 980 ) {
+              this.animate = true ;
+          }
+        }
+    },
+    
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll )
+    },
+
 }
 </script>
 
@@ -69,5 +85,7 @@ export default {
 .display-3 {
   text-align: center;
 }
-  
+.animate {
+    animation: scaleDiv 2s linear;
+}
 </style>
