@@ -1,6 +1,7 @@
 ---
 title: Blog Post One
 img: /uploads/1.jpg
+date: 02 jully 2020
 ---
 ### Markdown Cheat Sheet
 ```json

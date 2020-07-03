@@ -1,7 +1,7 @@
 ---
 title: Blog post two
 img: /uploads/2.jpg
-date: 2020-06-30T23:46:02.265Z
+date: 03 jully 2020
 ---
 ### Blog Post Number 2
 ```json
