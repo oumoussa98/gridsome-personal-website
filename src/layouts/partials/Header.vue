@@ -13,7 +13,11 @@
       <div class="links">
         <ul>
           <li v-for="(link, i) in links" :key="i">
-            <g-link class="g-link" :to="link.to">{{link.name}}</g-link>
+            <g-link class="g-link" :to="link.to">
+              {{
+              link.name
+              }}
+            </g-link>
           </li>
         </ul>
       </div>
@@ -32,13 +36,17 @@
       </div>
       <!-------- Links area -------->
       <div>
-        <button class="button-drawer" v-on:click="drawer=!drawer">
+        <button class="button-drawer" v-on:click="drawer = !drawer">
           <i class="fa fa-bars"></i>
         </button>
 
         <div v-show="drawer" class="drop-down">
           <li v-for="(link, i) in links" :key="i">
-            <g-link class="g-link" :to="link.to">{{link.name}}</g-link>
+            <g-link class="g-link" :to="link.to">
+              {{
+              link.name
+              }}
+            </g-link>
           </li>
           <darkLight />
         </div>
@@ -84,12 +92,13 @@ export default {
   },
   // mounted function ========================
   mounted() {
+    if (window.innerWidth < 800) this.mobileView = true;
     window.addEventListener("resize", this.handleMobileView);
   }
 };
 </script>
 
-<style scoped >
+<style scoped>
 /* header */
 .header {
   width: 100%;
