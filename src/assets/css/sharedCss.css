@@ -1,88 +1,99 @@
 /* variable */
 :root {
-    --bg: white;
-    --bg2: #cac7c7 ;
-    --color: #34495e ;
+	--bg: white;
+	--bg2: #e7e5e5;
+	--color: #34495e;
+	--json-color: red;
+	--script-color: blue;
+	--circles-color: #cac8c8;
 }
-*{
-    box-sizing: border-box; 
-    font-family:'Roboto', sans-serif;   
+* {
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 body {
-    margin: 0 auto;   
-    background-color: var(--bg);
-    font-size: 15px;
-    color: var(--color);
-    transition: background-color 0.5s ease-in-out;
+	margin: 0 auto;
+	background-color: var(--bg);
+	font-size: 15px;
+	color: var(--color);
+	transition: background-color 0.5s ease-in-out;
+}
+.darkmode {
+	--bg: #283541;
+	--bg2: rgb(25, 35, 46);
+	--color: rgb(199, 196, 196);
+	--json-color: rgb(233, 119, 119);
+	--script-color: rgb(7, 243, 27);
+	--circles-color: rgb(17, 24, 32);
 }
 .display-3 {
-    font-size: 50px;
-    padding: 0;
+	font-size: 50px;
+	padding: 0;
 }
 .header {
-    z-index: 99;
+	z-index: 99;
 }
 .active--exact {
-    border-bottom: 4px solid rgb(11, 230, 127);
-    cursor: text;
-  }
-button {
-    border: none;
-    outline: none;
-    background: none;
+	border-bottom: 4px solid rgb(11, 230, 127);
+	cursor: text;
 }
-ul  {
-    list-style: none;
+button {
+	border: none;
+	outline: none;
+	background: none;
+}
+ul {
+	list-style: none;
 }
 li {
-    list-style: none;
+	list-style: none;
 }
 
 /* key frames */
-@keyframes scaleDiv{
-    0%{
-        transform: rotate(0) scale(0.2);
-        opacity: 0.2;
-        }
-    20%{
-        transform: scale(0.4);
-        opacity: 0.4;
-        }
-    40%{
-        transform: scale(0.6);
-        opacity: 0.6;
-        }
-    60%{
-        transform: scale(0.8);
-        opacity: 0.8;
-        }
-    80%{
-        transform: scale(1);
-        opacity: 1;
-        }
+@keyframes scaleDiv {
+	0% {
+		transform: rotate(0) scale(0.2);
+		opacity: 0.2;
+	}
+	20% {
+		transform: scale(0.4);
+		opacity: 0.4;
+	}
+	40% {
+		transform: scale(0.6);
+		opacity: 0.6;
+	}
+	60% {
+		transform: scale(0.8);
+		opacity: 0.8;
+	}
+	80% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
-@keyframes scaleCircles{
-    0%{
-        transform: scale(1);
-        opacity: 0.2;
-        }
-    50%{
-        transform: scale(1.08);
-        opacity: 1;
-        }
-    100%{
-        transform: scale(1);
-        opacity: 0.2;
-        }
+@keyframes scaleCircles {
+	0% {
+		transform: scale(1);
+		opacity: 0.2;
+	}
+	50% {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 0.2;
+	}
 }
-@keyframes translateY{
-    0%{
-        transform: rotate(0) translateY(50vh);
-        }
-    50%{
-        transform: rotate(0) translateY(30vh);
-        }
-    100%{
-        transform: rotate(0) translateY(0);
-        }
+@keyframes translateY {
+	0% {
+		transform: rotate(0) translateY(50vh);
+	}
+	50% {
+		transform: rotate(0) translateY(30vh);
+	}
+	100% {
+		transform: rotate(0) translateY(0);
+	}
 }
