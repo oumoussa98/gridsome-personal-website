@@ -80,6 +80,6 @@ export default {
 }
 
 .animate {
-  animation: translateY 1.5s linear;
+  animation: translateY 1s linear;
 }
 </style>

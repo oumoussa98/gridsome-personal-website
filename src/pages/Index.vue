@@ -116,7 +116,7 @@ export default {
   font-size: 25px;
 }
 
-/* Circles or waves */
+/* Circles or bubbles */
 .circles .circle1,
 .circle2,
 .circle3,
@@ -126,34 +126,31 @@ export default {
   z-index: -1;
   position: absolute;
   clip-path: circle(50% at 50% 50%);
+  animation: scaleCircles 4s infinite linear;
 }
 .circles .circle1 {
-  padding: 20vh;
-  top: -5%;
-  right: -10%;
+  padding: 15vh;
+  top: 60%;
+  right: 15%;
   opacity: 1;
-  animation: scaleCircles 3s infinite 0s linear;
 }
 .circles .circle2 {
-  padding: 15vh;
-  top: 45%;
-  right: 20%;
-  opacity: 0.8;
-  animation: scaleCircles 3s infinite 0s linear;
-}
-.circles .circle3 {
   padding: 10vh;
   top: 75%;
-  right: 45%;
+  right: 44%;
   opacity: 0.6;
-  animation: scaleCircles 3s infinite 0s linear;
+}
+.circles .circle3 {
+  padding: 7vh;
+  top: 85%;
+  right: 68%;
+  opacity: 0.4;
 }
 .circles .circle4 {
   padding: 5vh;
-  top: 95%;
-  right: 65%;
+  top: 92.5%;
+  right: 88%;
   opacity: 0.4;
-  animation: scaleCircles 3s infinite 0s linear;
 }
 
 @media only screen and (max-width: 900px) {

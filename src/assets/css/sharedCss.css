@@ -1,11 +1,11 @@
 /* variable */
 :root {
 	--bg: white;
-	--bg2: #e7e5e5;
+	--bg2: #e4e4e4;
 	--color: #34495e;
 	--json-color: red;
 	--script-color: blue;
-	--circles-color: #cac8c8;
+	--circles-color: #a7a4a4;
 }
 * {
 	box-sizing: border-box;
@@ -24,7 +24,7 @@ body {
 	--color: rgb(199, 196, 196);
 	--json-color: rgb(233, 119, 119);
 	--script-color: rgb(7, 243, 27);
-	--circles-color: rgb(17, 24, 32);
+	--circles-color: rgb(10, 14, 19);
 }
 .display-3 {
 	font-size: 50px;
@@ -78,7 +78,7 @@ li {
 		opacity: 0.2;
 	}
 	50% {
-		transform: scale(1.1);
+		transform: scale(1.2);
 		opacity: 1;
 	}
 	100% {
@@ -88,12 +88,12 @@ li {
 }
 @keyframes translateY {
 	0% {
-		transform: rotate(0) translateY(50vh);
+		transform: translateY(50vh);
 	}
 	50% {
-		transform: rotate(0) translateY(30vh);
+		transform: translateY(30vh);
 	}
 	100% {
-		transform: rotate(0) translateY(0);
+		transform: translateY(0);
 	}
 }
