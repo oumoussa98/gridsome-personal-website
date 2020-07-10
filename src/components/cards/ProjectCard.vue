@@ -32,8 +32,9 @@ export default {
   width: 100%;
   min-height: 420px;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 5px;
   margin: 30px 0;
+  border: none;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
 }
 .card-title {
@@ -50,7 +51,7 @@ export default {
 }
 #card-links a {
   padding: 8px;
-  color: rgb(7, 165, 170);
+  color: rgb(7, 185, 185);
   cursor: pointer;
   text-decoration: none;
   border-radius: 6px;

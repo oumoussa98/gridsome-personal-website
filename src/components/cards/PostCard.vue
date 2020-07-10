@@ -28,7 +28,7 @@ export default {
 .card {
   display: flow-root;
   width: 100%;
-  min-height: 470px;
+  min-height: 450px;
   text-align: center;
   border-radius: 6px;
   margin: 30px 0;
@@ -42,13 +42,14 @@ export default {
 .card-image img {
   width: 100%;
   height: 250px;
+  border-radius: 6px 6px 0 0;
 }
 .card-title {
-  min-height: 50px;
-  padding: 10px;
+  padding: 0 10px;
+  margin: 0;
 }
 .card-footer {
-  padding: 15px;
+  padding: 0 15px;
   font-size: 16px;
 }
 </style>
