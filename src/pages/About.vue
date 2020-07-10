@@ -11,6 +11,12 @@
           my computer it was something very exiting to me to build
           something beautiful and playing around with it, i'm always enjoy it.
         </p>
+        <h2>Status</h2>
+        <p>
+          <span>Currently:</span> I'm working on this website
+          <br />
+          <span>Next Project:</span> I'm going to try to build an e-commerce website just for the sake of practice and learn more
+        </p>
       </div>
       <div class="col-md-6 image-div">
         <g-image class="image" src="/uploads/myimg.png" alt="My photo" />
@@ -36,7 +42,8 @@ export default {
 .image-div .image {
   width: 100%;
   height: 90vh;
-  padding: 20px 0;
+  margin: 40px 0 0 0;
+  border-radius: 6px;
 }
 .image-div .text {
   position: absolute;
@@ -45,5 +52,9 @@ export default {
   transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
+}
+p span {
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 </style>
