@@ -12,8 +12,6 @@
 					build something beautiful and playing around with it, i'm
 					always enjoy it.
 				</p>
-				<h2>Status</h2>
-				<p><span>Currently:</span> I'm working on this website</p>
 			</div>
 			<div class="col-md-6 image-div">
 				<g-image
