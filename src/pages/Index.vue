@@ -5,9 +5,7 @@
                 <!-- my info section -->
                 <div class="row">
                     <div class="col-md-10">
-                        <p class="display-3">
-                            <span class="first-letters">I'm</span> Abdelouahed Oumoussa
-                        </p>
+                        <p class="display-3">I'm Abdelouahed Oumoussa</p>
                         <p class="bio">
                             A self-taught full-stack web developer and mobile
                             apps developer with native script I'v been coding
@@ -46,11 +44,8 @@
                 <div class="circle1"></div>
                 <div class="circle2"></div>
                 <div class="circle3"></div>
-                <div class="circle4"></div>
                 <div class="circle5"></div>
                 <div class="circle6"></div>
-                <div class="circle7"></div>
-                <div class="circle8"></div>
             </div>
             <skills />
             <whatIBuilt />
@@ -66,14 +61,14 @@ import anotherSection from "~/components/homeComponents/AnotherSection";
 
 export default {
     metaInfo: {
-        title: "Home"
+        title: "Home",
     },
 
     components: {
         skills,
         whatIBuilt,
-        anotherSection
-    }
+        anotherSection,
+    },
 };
 </script>
 
@@ -133,11 +128,8 @@ export default {
 .circles .circle1,
 .circle2,
 .circle3,
-.circle4,
 .circle5,
-.circle6,
-.circle7,
-.circle8 {
+.circle6 {
     background-color: var(--circles-color);
     transition: background-color 0.5s;
     z-index: -1;
@@ -145,7 +137,7 @@ export default {
     clip-path: circle(50% at 50% 50%);
     animation: scaleCircles 4s infinite linear;
     opacity: 1;
-    padding: 6vh;
+    padding: 4vh;
 }
 .circles .circle1 {
     top: 60%;
@@ -156,32 +148,14 @@ export default {
     right: 15%;
 }
 .circles .circle3 {
-    top: 50%;
+    top: 80%;
     right: 55%;
 }
-.circles .circle4 {
-    top: 18%;
-    right: 86%;
-    padding: 8vh;
-    background-color: #41b883;
-}
 .circles .circle5 {
-    top: 20%;
-    right: 87%;
-    padding: 6vh;
-    background-color: #34495e;
-}
-.circles .circle8 {
-    top: 22%;
-    right: 88%;
-    padding: 4vh;
-    background: white;
-}
-.circles .circle6 {
     top: 83%;
     right: 84%;
 }
-.circles .circle7 {
+.circles .circle6 {
     top: 70%;
     right: 30%;
 }
@@ -196,9 +170,6 @@ export default {
     .circle5,
     .circle8 {
         display: none;
-    }
-    .first-letters {
-        color: var(--color);
     }
 }
 </style>
