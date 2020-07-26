@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div :class="{ animate: animate }">
+                    <div>
                         <g-image src="~/assets/images/ui.svg" class="img" />
                         <span>
                             <h2>UI and UX</h2>Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -43,29 +43,6 @@
     </div>
 </template>
 
-<script defer>
-export default {
-    // Data ====================
-    data: () => ({
-        animate: false,
-    }),
-    // Methods ================
-    methods: {
-        handleScroll() {
-            let y = scrollY;
-            if (y >= 150) {
-                this.animate = true;
-            }
-        },
-    },
-
-    // mounted function ===============
-    mounted() {
-        window.addEventListener("scroll", this.handleScroll);
-    },
-};
-</script>
-
 <style scoped>
 .skills {
     min-height: 100vh;
@@ -84,8 +61,5 @@ export default {
 }
 .col-md-4 {
     text-align: center;
-}
-.animate {
-    animation: translateY 1s linear;
 }
 </style>
