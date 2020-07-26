@@ -1,8 +1,8 @@
 /* variable */
 :root {
 	--bg: white;
-	--bg2: #e4e4e4;
-	--color: #34495e;
+	--bg2: #f7f4f4;
+	--color: #192735;
 	--json-color: red;
 	--script-color: blue;
 	--circles-color: #a7a4a4;
@@ -20,8 +20,8 @@ body {
 }
 .darkmode {
 	--bg: #283541;
-	--bg2: rgb(25, 35, 46);
-	--color: rgb(199, 196, 196);
+	--bg2: rgb(22, 32, 43);
+	--color: rgb(230, 228, 228);
 	--json-color: rgb(233, 119, 119);
 	--script-color: rgb(7, 243, 27);
 	--circles-color: rgb(10, 14, 19);
@@ -84,16 +84,5 @@ li {
 	100% {
 		transform: scale(1);
 		opacity: 0.1;
-	}
-}
-@keyframes translateY {
-	0% {
-		transform: translateY(50vh);
-	}
-	50% {
-		transform: translateY(30vh);
-	}
-	100% {
-		transform: translateY(0);
 	}
 }
