@@ -4,13 +4,13 @@
 			<div class="col-md-6">
 				<h1>Get some info about me</h1>
 				<p>
-					my name is abdelouahed oumoussa from morocco, born on a
-					small town near to marrakech city, this town called ourika
-					it's really wonderful place you should visit it someday. i
-					start learning web development since i was 21, from home
-					with my computer it was something very exiting to me to
-					build something beautiful and playing around with it, i'm
-					always enjoy it.
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
+					rerum nulla blanditiis cupiditate accusamus numquam, magni
+					maxime iure nemo animi quos, dolor, quas est rem! Maxime
+					architecto quod nemo deleniti. consectetur adipisicing elit.
+					Tempore reiciendis asperiores non enim minima porro.
+					Officiis libero vero rem nemo, ratione esse quas est ipsam!
+					Animi nulla illo quidem eligendi.
 				</p>
 			</div>
 			<div class="col-md-6 image-div">
